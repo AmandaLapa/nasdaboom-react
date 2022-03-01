@@ -1,0 +1,28 @@
+@import '../../../Styles/mixins.scss';
+@import '../../../Styles/variables.scss';
+@import '../../../Styles/patterns.scss';
+
+.s-faq {
+ padding-top: 8rem;
+ padding-bottom: 11.2rem;
+ background: url(../../../Assets/bg-footer.png)no-repeat bottom center;
+ background-position-y: 174%;
+
+ .container {
+  @include flex(column, center, flex-start);
+ }
+
+ .title {
+  margin-bottom: 8rem;
+
+  span {
+   margin-left: 0;
+   margin-right: 0.5rem;
+  }
+ }
+
+ .content {
+  width: 100%;
+  max-width: 65.6rem;
+ }
+}

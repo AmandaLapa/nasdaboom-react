@@ -1,0 +1,12 @@
+@import '../../Styles/variables.scss';
+
+footer {
+ padding-bottom: 3.2rem;
+
+ p {
+  padding-top: 3.2rem;
+  border-top: 1.5px solid rgba(186, 153, 202, 0.25);
+  text-align: center;
+  color: $text-light;
+ }
+}

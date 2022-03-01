@@ -1,0 +1,67 @@
+@import '../../Styles/mixins';
+@import '../../Styles/variables.scss';
+@import '../../Styles/patterns.scss';
+
+
+.faq {
+ width: 100%;
+ height: auto;
+ background-color: $brand-primary-dark;
+ border-radius: 0.8rem;
+ cursor: pointer;
+ transition: all .3s ease;
+
+ &.active {
+  background-color: $brand-primary;
+  transition: all .3s ease;
+
+  .top-faq {
+   .icone {
+    background-color: rgba(186, 153, 202, 0.15);
+    transform: rotate(180deg);
+    transition: all .5s ease;
+   }
+  }
+ }
+
+ &:not(:last-child) {
+  margin-bottom: 3.2rem;
+ }
+
+ .top-faq {
+  padding: 2rem 3.2rem;
+  @include flex(row, center, space-between);
+
+  h3 {
+   font-size: 2rem;
+   letter-spacing: 0.5px;
+   flex: 1;
+  }
+
+  .icone {
+   align-self: flex-start;
+   margin-left: 2rem;
+   width: 3.2rem;
+   height: 3.2rem;
+   background-color: #490664;
+   border-radius: 0.4rem;
+   @include flex(row, center, center);
+   transition: all .5s ease;
+  }
+ }
+
+ .resposta {
+  padding: 2.5rem;
+  position: relative;
+
+  &::before {
+   content: '';
+   position: absolute;
+   top: 0;
+   left: 2.5rem;
+   width: 92%;
+   height: 0.15rem;
+   background-color: rgba(186, 153, 202, 0.25);
+  }
+ }
+}

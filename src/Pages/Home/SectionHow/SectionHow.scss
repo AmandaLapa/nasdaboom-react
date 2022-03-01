@@ -1,0 +1,153 @@
+@import '../../../Styles/mixins.scss';
+@import '../../../Styles/variables.scss';
+@import '../../../Styles/patterns.scss';
+
+.s-how {
+ padding-top: 9.6rem;
+ padding-bottom: 8.8rem;
+ background: url(../../../Assets/bg-how.png) no-repeat;
+
+ .txt {
+  margin-bottom: 8rem;
+
+  p {
+   max-width: 65.6rem;
+  }
+ }
+
+ .content {
+  margin-bottom: 9.6rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 3.2rem;
+  row-gap: 15.2rem;
+
+  .item {
+   padding: 3.2rem 4.8rem;
+   @include flex(column, center, flex-start);
+   position: relative;
+
+   p {
+    text-align: center;
+    color: $text-light;
+   }
+
+   .num {
+    margin-bottom: 3.2rem;
+    margin-top: -5.5rem;
+    width: 4.8rem;
+    height: 4.8rem;
+    @include flex(row, center, center);
+    background-color: $brand-primary;
+    border-radius: 0.8rem;
+
+    font: 600 3.2rem/100% $font;
+    text-transform: uppercase;
+   }
+
+   &:first-child,
+   &:nth-child(2),
+   &:nth-child(4) {
+    &::after {
+     content: '';
+     background: url(../../../Assets/line.svg)no-repeat;
+     background-size: cover;
+     width: 5rem;
+     height: 0.8rem;
+     position: absolute;
+     right: -4rem;
+     top: 8.6rem;
+     z-index: 2;
+    }
+   }
+
+   &:nth-child(3) {
+    &::after {
+     content: '';
+     background: url(../../../Assets/line-lg.svg)no-repeat;
+     background-size: cover;
+     width: 1288px;
+     height: 320px;
+     position: absolute;
+     right: -4rem;
+     top: 8.6rem;
+     z-index: 2;
+     pointer-events: none;
+    }
+   }
+
+   &:not(:last-child) {
+    min-height: 17.2rem;
+    background-color: $brand-primary-dark;
+    border-radius: 0.8rem;
+
+    @include flex(column, center, flex-start);
+   }
+
+   &:last-child {
+    justify-content: center;
+
+    img {
+     margin-bottom: 1.6rem;
+    }
+
+    p {
+     max-width: 60%;
+    }
+   }
+  }
+ }
+
+ .numbers {
+  @include flex(row, center, space-between);
+
+  .txts {
+   max-width: 35.2rem;
+
+   h3 {
+    max-width: 20.1rem;
+    margin-bottom: 2.4rem;
+    font-size: 3.2rem;
+   }
+
+   p {
+    color: $text-light;
+   }
+  }
+
+  .box {
+   padding: 4.8rem 7.2rem;
+   width: 100%;
+   min-height: 27.2rem;
+   max-width: 80rem;
+   @include flex(row, center, space-between);
+
+   background: url(../../../Assets/bg.svg) no-repeat;
+   background-size: cover;
+
+   ul {
+    width: 100%;
+    max-width: 28.8rem;
+
+    li {
+     @include flex(row, flex-start, center);
+
+     &:not(:last-child) {
+      margin-bottom: 2.4rem;
+     }
+
+     .icone {
+      margin-right: 1.6rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      @include flex(row, center, center);
+     }
+
+     p {
+      flex: 1;
+     }
+    }
+   }
+  }
+ }
+}

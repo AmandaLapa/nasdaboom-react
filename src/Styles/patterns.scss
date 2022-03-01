@@ -1,0 +1,48 @@
+.title {
+ position: relative;
+ width: fit-content;
+
+ display: flex;
+ align-items: center;
+ text-align: center;
+
+ &::before,
+ &::after {
+  content: '';
+  position: absolute;
+  width: 8rem;
+  height: 0.2rem;
+ }
+
+ &::before{
+  left: -10.4rem;
+  background: linear-gradient(221.57deg, #F17E29 -26.47%, rgba(241, 126, 41, 0) 112.92%);
+ }
+
+ &::after{
+  right: -10.4rem;
+  background: linear-gradient(221.57deg, rgba(241, 126, 41, 0) -26.47%, #F17E29  112.92%);
+ }
+
+ span{
+  margin-left: 0.5rem;
+ }
+}
+
+.txt-center {
+ @include flex(column, center, center);
+
+ h2,
+ p {
+  text-align: center;
+ }
+
+ h2 {
+  margin-bottom: 2.4rem;
+ }
+
+ p {
+  width: 100%;
+  color: $text-light;
+ }
+}

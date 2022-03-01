@@ -1,0 +1,36 @@
+@import '../../Styles/mixins.scss';
+@import '../../Styles/variables.scss';
+
+header {
+ padding: 4rem 0;
+ position: absolute;
+ width: 100%;
+ z-index: 10;
+
+ .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+ }
+
+ .actions {
+  @include flex(row, center, flex-start);
+
+  .btn {
+   min-width: 12.8rem;
+   height: 4.8rem;
+   background-color: $green;
+   border-radius: 0.4rem;
+   @include flex(row, center, center);
+
+   font-weight: 600;
+   color: #120019;
+   text-align: center;
+   transition: background-color .3s ease;
+
+   &:hover {
+    background-color: $green-hover;
+   }
+  }
+ }
+}
